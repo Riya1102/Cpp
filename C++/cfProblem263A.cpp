@@ -18,7 +18,7 @@ int main()
             }
         }
     }
-    pos += abs(2 - R) + abs(2 - C);
+    pos = abs(2 - R) + abs(2 - C);
     cout << pos << endl;
 
     return 0;

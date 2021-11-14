@@ -1,18 +1,22 @@
 #include <iostream>
+#include <algorithm>
+#include <string.h>
 using namespace std;
 
 int main()
 {
-    string s;
+    char s[101];
     cin >> s;
+    int l = strlen(s);
+    sort(s, s + l);
     int cnt = 0;
-    for (int i = 0; i < s.length(); i++)
+    for (int i = 0; i < l; i++)
     {
-        if (s[i] == s[i + 1])
+        if (s[i] != s[i + 1])
         {
-        continue;
+
+            cnt++;
         }
-        cnt++;
     }
     if (cnt % 2 != 0)
     {
@@ -22,6 +26,6 @@ int main()
     {
         cout << "CHAT WITH HER!" << endl;
     }
-    
+
     return 0;
 }
